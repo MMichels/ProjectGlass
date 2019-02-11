@@ -1,0 +1,42 @@
+/* 
+    Created on : 11 de fev de 2019, 20:21:36
+    Author     : Mateus
+*/
+@charset "UTF-8";
+
+body{
+    background-color: #eAeAeA;
+}
+p{
+    text-align: justify;
+    text-indent: 50px;
+}
+/* Formatação de imagens com legendas */
+figure.foto_legenda{
+    position: relative; /* indica que os filhos dessa classe terão layout relativo a ela */
+    border: 2px solid gray; /* borda de 2pixels cinza */
+    box-shadow: 1px 1px 4px black; /* Sombra ao redor da imagem */
+}
+
+figure.foto_legenda img{
+    width: 100%; /* imagem com largura e altura 100% em relação a borda */
+    height: 100%;
+}
+
+figure.foto_legenda figcaption{
+    position: absolute; /* posicionamento absoluto em relação ao pai */
+    top: 0px; /* coloca a legenda no topo */
+    background-color: rgba(0, 0, 0, .4);/* fundo translucido ao redor da legenda */
+    color: white; /* letras brancas */
+    width: 100%; /* 100% relativo ao pai (do msm tamnho da imagem) */
+    height: 100%;
+    padding: 10px; /* um tipo de "borda" forçada */
+    box-sizing: border-box; /* força o padding a respeitar os limites de tamanho do pai */
+    opacity: 0; /* torna todo esse objeto invisivel (ver proxima formatação) */
+    transition: opacity 1s; /* efeito de transição que ocorre quando o atibuto opacidade for alterado, com duração de 1 segundo */
+}
+
+figure.foto_legenda:hover figcaption{
+    /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
+    opacity: 1; /* toda o objeto 100% visivel */
+}
