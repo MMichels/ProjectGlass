@@ -99,14 +99,17 @@ header#cabecalho img#img_oculos_pequeno{
     transform: rotate(350deg);  /* rotaciona a imagem em 350º */
 }
 
+/* Formatação do corpo */
+
 section#corpo {
     display: block; /* altera o tipo de display para blocos */
     width: 430px;   /*altera o tamanho do bloco */
     float: left;    /* transforma em um bloco flutuante a esquerda */
     padding-right: 5px; /* adiciona o padding */
     border-right: 1px black solid; /* adiciona a borda a direita do corpo */
-
 }
+
+/* Formatação da area lateral */
 
 aside#lateral {
     display: block; /* altera o tipo de display para blocos */
@@ -115,6 +118,7 @@ aside#lateral {
 }
 
 /* Formatação de imagens com legendas */
+
 figure.foto_legenda{
     position: relative; /* indica que os filhos dessa classe terão layout relativo a ela */
     border: 2px solid gray; /* borda de 2pixels cinza */
@@ -138,6 +142,37 @@ figure.foto_legenda figcaption{
     opacity: 0; /* torna todo esse objeto invisivel (ver proxima formatação) */
     transition: opacity 1s; /* efeito de transição que ocorre quando o atibuto opacidade for alterado, com duração de 1 segundo */
 }
+
+/* Formatação das tabelas */
+
+table#especs{
+    border: 2px solid #606060;
+    border-spacing: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#especs caption{
+    color: #888888
+}
+
+table#especs td{
+    background: #606060;
+    color: white;
+    text-align: right;
+    vertical-align: top;
+    padding: 10px;
+}
+
+table#especs td.valor_caracteristica {
+    background: #909090;
+    color: black;
+    text-align: left;
+    border: 2px solid #606060;
+
+}
+
+/* Formatação do rodapé */
 
 figure.foto_legenda:hover figcaption{
     /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
