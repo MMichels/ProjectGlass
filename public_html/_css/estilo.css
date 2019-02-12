@@ -10,7 +10,7 @@ body{
 
 /* Estilos da div interface */
 div#interface{
-    width: 85%;
+    width: 800px;
     background-color: white;
     padding: 10px 5px 5px 15px;
     margin: -20px auto 0px auto; /* centralizando a interface deixando como auto a margm da esquerda e da direita */
@@ -22,11 +22,76 @@ p{
     text-indent: 50px;
 }
 
+/* Formatação do menu */
+
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 316px;
+}
+
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 1px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover{
+    background-color: #808080;
+}
+
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+    color: whitesmoke;
+}
+
 /* formatação do header */
+
+header#cabecalho {
+    height: 150px;
+    border-bottom: 1px #808080 outset;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+}
+
+header#cabecalho h1{
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    color: #808080;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+header#cabecalho h2{
+    font-family: Arial, sans-serif;
+    font-size: 30pt;
+    color: #888888;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    padding: 0px;
+    margin-top: 0px;
+}
+
 header#cabecalho img#img_oculos_pequeno{
     position: absolute;
-    top: 50px;
-    left: 74%;
+    top: 90px;
+    left: 720px;
+    transform: rotate(350deg);
 }
 
 /* Formatação de imagens com legendas */
@@ -57,43 +122,4 @@ figure.foto_legenda figcaption{
 figure.foto_legenda:hover figcaption{
     /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
     opacity: 1; /* toda o objeto 100% visivel */
-}
-
-/* Formatação do menu */
-
-nav#menu{
-    display: block;
-}
-
-nav#menu ul{
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: -20px;
-    left: 350px;
-}
-
-nav#menu li{
-    display: inline-block;
-    background-color: #dddddd;
-    padding: 5px;
-    margin: 1px;
-    transition: background-color 1s;
-}
-
-nav#menu li:hover{
-    background-color: #808080;
-}
-
-nav#menu h1{
-    display: none;
-}
-
-nav#menu a{
-    color: black;
-    text-decoration: none;
-}
-
-nav#menu a:hover{
-    color: whitesmoke;
 }
