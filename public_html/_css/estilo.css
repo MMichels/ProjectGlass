@@ -40,3 +40,28 @@ figure.foto_legenda:hover figcaption{
     /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
     opacity: 1; /* toda o objeto 100% visivel */
 }
+
+/* Formatação do menu */
+
+nav#menu{
+    display: block;
+}
+
+nav#menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: -20px;
+    left: 350px;
+}
+
+nav#menu li{
+    display: inline-block;
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 1px;
+}
+
+nav#menu h1{
+    display: none;
+}
