@@ -3,99 +3,115 @@
     Author     : Mateus
 */
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web"); /* importa a fonte de um site externo */
 @font-face{
+    /* adiciona uma fonte personalizada de um arquivo ttf/otf */
     font-family: 'fonte_logo';
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 body{
-    background-color: #eAeAeA;
+    background-color: #eAeAeA; /* Adiciona uma cor de fundo fixa para todo o site */
 }
 
 /* Estilos da div interface */
 div#interface{
-    width: 800px;
-    background-color: white;
-    padding: 10px 5px 5px 15px;
+    width: 800px;   /* define a largura da interface com 800 pixels */
+    background-color: white; /*fundo da interface como branco*/
+    padding: 10px 5px 5px 15px; /*adiciona um padding (quadro interno) (cima direita baixo esquerda)*/
     margin: -20px auto 0px auto; /* centralizando a interface deixando como auto a margm da esquerda e da direita */
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    box-shadow: 0px 0px 10px rgba(0,0,0,.5);/*adiciona uma borda sombreada*/
 }  
 
 p{
-    text-align: justify;
-    text-indent: 50px;
+    text-align: justify; /* define a formatação padrao para os paragrafos como alinhado */
+    text-indent: 50px; /* identação (recuo da primeira linha) de 50 pixels */
 }
 
 /* Formatação do menu */
 
 nav#menu{
-    display: block;
+    display: block; /*altera a maneira como o menu é exibido (lado a lado) */
 }
 
 nav#menu ul{
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: -20px;
-    left: 316px;
+    list-style: none;           /* remove estilos padroes anteriores (remove os marcadores padroes) */
+    text-transform: uppercase;  /* todas as letrass em maiusculo */
+    position: absolute;         /* layout absoluto, ou seja, posicionamento livre dentro do site */
+    top: -20px;                 /* retira a margem superior padrao para alinhar com o topo da pagina */
+    left: 316px;                /* adiciona 316 pixels ao lado esquerdo */
 }
 
 nav#menu li{
-    display: inline-block;
-    background-color: #dddddd;
-    padding: 5px;
-    margin: 1px;
-    transition: background-color 1s;
+    display: inline-block;      /* transforma a lista para uma lsita lado a lado */
+    background-color: #dddddd;  /* altera a cor dos elementos da lista */
+    padding: 5px;               /* adiciona um padding (quadro interno) de 5px para dar um efeito de borda */
+    margin: 1px;                /* adiciona uma margem externa de 1px para afastar os itens da lista */
+    transition: background-color 1s;    /* configura uma transição pra a cor de fundo com duração de 1 segundo */
 }
 
 nav#menu li:hover{
-    background-color: #808080;
+    background-color: #808080; /* altera a cor de fundo quando passa o mouse por cima */
 }
 
 nav#menu h1{
-    display: none;
+    display: none; /* esconde os titulos h1 */
 }
 
 nav#menu a{
-    color: black;
-    text-decoration: none;
+    color: black;           /* altera a cor do texto dos links */
+    text-decoration: none;  /* remove os efeitos de click nos links */
 }
 
-nav#menu a:hover{
-    color: whitesmoke;
+nav#menu a:hover{           
+    color: whitesmoke;  /* altera a cor do texto ao passar com o mouse */
 }
 
 /* formatação do header */
 
 header#cabecalho {
-    height: 150px;
-    border-bottom: 1px #808080 outset;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px;
+    height: 150px;                      /*define uma altura para o cabeçalho */
+    border-bottom: 1px #808080 solid;  /* adiciona uma pequena borda inferior */
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px; /* adiciona a logo do class como plano de fundo do cabeçalho, mas sem repetições e ajusta a posicao vertical e horizontal */
 }
 
 header#cabecalho h1{
-    font-family: 'fonte_logo', sans-serif;
-    font-size: 30;
-    color: #808080;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-    padding: 0px;
-    margin-bottom: 0px;
+    font-family: 'fonte_logo', sans-serif; /* alteraa a fonte do titulo principal */
+    font-size: 30px;    /* altera o tamanho da fonte */
+    color: #808080;     /* altera a cor da fonte */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);   /*adiciona uma sombra ao texto, com 1px lateral, 1px inferior, 1px de dissipação e com 60% de opacidade */
+    padding: 0px;   /* remove o padding padrão */
+    margin-bottom: 0px; /* remove a margem inferior padrão para aproximar o titulo principal e o titulo secundario */
 }
 
 header#cabecalho h2{
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 30;
-    color: #888888;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-    padding: 0px;
-    margin-top: 0px;
+    font-family: 'Titillium Web', sans-serif; /* alteraa a fonte do titulo secundario */
+    font-size: 20px;     /* altera o tamanho da fonte */
+    color: #888888; /* altera a cor da fonte */
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);   /*adiciona uma sombra ao texto, com 1px lateral, 1px inferior, 1px de dissipação e com 60% de opacidade */
+    padding: 0px;   /* remove o padding padrão */
+    margin-top: 0px;    /* remove a margem inferior padrão para aproximar o titulo principal e o titulo secundario */
 }
 
 header#cabecalho img#img_oculos_pequeno{
-    position: absolute;
-    top: 90px;
-    left: 720px;
-    transform: rotate(350deg);
+    position: absolute; /* coloca a imagem com posicionamento absoluto dentro do site */
+    top: 90px;  /* altera a distancia até o topo */
+    left: 720px;    /* aumenta a distancia da margem esquerda */
+    transform: rotate(350deg);  /* rotaciona a imagem em 350º */
+}
+
+section#corpo {
+    display: block; /* altera o tipo de display para blocos */
+    width: 430px;   /*altera o tamanho do bloco */
+    float: left;    /* transforma em um bloco flutuante a esquerda */
+    padding-right: 5px; /* adiciona o padding */
+    border-right: 1px black solid; /* adiciona a borda a direita do corpo */
+
+}
+
+aside#lateral {
+    display: block; /* altera o tipo de display para blocos */
+    width: 350px;   /*altera o tamanho do bloco */
+    float: right;    /* transforma em um bloco flutuante a direita */
 }
 
 /* Formatação de imagens com legendas */
@@ -126,4 +142,13 @@ figure.foto_legenda figcaption{
 figure.foto_legenda:hover figcaption{
     /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
     opacity: 1; /* toda o objeto 100% visivel */
+}
+
+footer#rodape{
+    clear: both;    /* remove as configurações herdadas */
+    border-top: 1px  black solid;   /* adiciona a borda no topo do rodapé */
+}
+
+footer#rodape h4 {
+    text-align: center; /* alinha os titulos h4 dentro do rodapé */
 }
