@@ -60,8 +60,22 @@ nav#menu li{
     background-color: #dddddd;
     padding: 5px;
     margin: 1px;
+    transition: background-color 1s;
+}
+
+nav#menu li:hover{
+    background-color: #808080;
 }
 
 nav#menu h1{
     display: none;
+}
+
+nav#menu a{
+    color: black;
+    text-decoration: none;
+}
+
+nav#menu a:hover{
+    color: whitesmoke;
 }
