@@ -3,7 +3,11 @@
     Author     : Mateus
 */
 @charset "UTF-8";
-
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@font-face{
+    font-family: 'fonte_logo';
+    src: url("../_fonts/bubblegum-sans-regular.otf");
+}
 body{
     background-color: #eAeAeA;
 }
@@ -70,8 +74,8 @@ header#cabecalho {
 }
 
 header#cabecalho h1{
-    font-family: Arial, sans-serif;
-    font-size: 30pt;
+    font-family: 'fonte_logo', sans-serif;
+    font-size: 30;
     color: #808080;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
     padding: 0px;
@@ -79,8 +83,8 @@ header#cabecalho h1{
 }
 
 header#cabecalho h2{
-    font-family: Arial, sans-serif;
-    font-size: 30pt;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30;
     color: #888888;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
     padding: 0px;
