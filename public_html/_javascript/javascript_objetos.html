@@ -10,23 +10,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function acendeLampada(){
-                document.getElementById("lampada").src="../_imagens/lampada-acesa.jpg";
-            }
-            function apagaLampada(){
-                document.getElementById("lampada").src="../_imagens/lampada-apagada.jpg";
-            }
-            function quebraLampada(){
-                document.getElementById("lampada").src="../_imagens/lampada-quebrada.jpg";
+            var quebrada = false;
+            function mudarLampada(tipo){
+                if (!quebrada){
+                    arquivo = "../_imagens/"+tipo+".jpg"
+                    document.getElementById("lampada").src=arquivo;
+                    if (tipo === "lampada-quebrada"){
+                        quebrada = true;
+                    }
+                }
             }
         </script>
     </head>
     <body>
         <h1>Acenda a lâmpada!</h1>
         <img src="../_imagens/lampada-apagada.jpg" id="lampada"
-             onclick="quebraLampada()"
-             onmousemove="acendeLampada()"
-             onmouseout="apagaLampada()"/>
+             onmousemove="mudarLampada('lampada-acesa')"
+             onmouseout="mudarLampada('lampada-apagada')"
+             onclick="mudarLampada('lampada-quebrada')"/>
         
     </body>
 </html>
