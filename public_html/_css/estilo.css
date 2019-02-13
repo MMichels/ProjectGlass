@@ -16,7 +16,7 @@ body{
 
 /* Estilos da div interface */
 div#interface{
-    width: 800px;   /* define a largura da interface com 800 pixels */
+    width: 920px;   /* define a largura da interface com 800 pixels */
     background-color: white; /*fundo da interface como branco*/
     padding: 10px 5px 5px 15px; /*adiciona um padding (quadro interno) (cima direita baixo esquerda)*/
     margin: -20px auto 0px auto; /* centralizando a interface deixando como auto a margm da esquerda e da direita */
