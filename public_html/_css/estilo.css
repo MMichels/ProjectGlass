@@ -106,7 +106,6 @@ header#cabecalho img#img_oculos_pequeno{
     position: absolute; /* coloca a imagem com posicionamento absoluto dentro do site */
     top: 40px;  /* altera a distancia até o topo */
     left: 700px;    /* aumenta a distancia da margem esquerda */
-    transform: rotate(350deg);  /* rotaciona a imagem em 350º */
 }
 
 /* Formatação do corpo */
