@@ -10,6 +10,7 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 body{
+    font-family: Arial, sans-serif;
     background-color: #eAeAeA; /* Adiciona uma cor de fundo fixa para todo o site */
 }
 
@@ -25,6 +26,15 @@ div#interface{
 p{
     text-align: justify; /* define a formatação padrao para os paragrafos como alinhado */
     text-indent: 50px; /* identação (recuo da primeira linha) de 50 pixels */
+}
+
+a{
+    color: #303030;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 /* Formatação do menu */
@@ -94,8 +104,8 @@ header#cabecalho h2{
 
 header#cabecalho img#img_oculos_pequeno{
     position: absolute; /* coloca a imagem com posicionamento absoluto dentro do site */
-    top: 90px;  /* altera a distancia até o topo */
-    left: 720px;    /* aumenta a distancia da margem esquerda */
+    top: 40px;  /* altera a distancia até o topo */
+    left: 700px;    /* aumenta a distancia da margem esquerda */
     transform: rotate(350deg);  /* rotaciona a imagem em 350º */
 }
 
@@ -103,18 +113,73 @@ header#cabecalho img#img_oculos_pequeno{
 
 section#corpo {
     display: block; /* altera o tipo de display para blocos */
-    width: 430px;   /*altera o tamanho do bloco */
+    width: 425px;   /*altera o tamanho do bloco */
     float: left;    /* transforma em um bloco flutuante a esquerda */
-    padding-right: 5px; /* adiciona o padding */
+    padding-right: 10px; /* adiciona o padding */
     border-right: 1px black solid; /* adiciona a borda a direita do corpo */
+}
+
+/* Formatação do artigo principal */
+
+article#noticia_principal h2{
+    font-size: 12pt;
+    color: #606060;
+    background-color: #dddddd;
+    padding: 5px 0px 5px 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+/* Formatação do cabeçalho do artigo principal */
+
+header#cabecalho_artigo h1{
+    font-family: 'fonte_logo', sans-serif;
+    font-size: 18pt;
+    color: #808080;
+    margin-bottom: 0px;
+}
+
+header#cabecalho_artigo h2{
+    font-family: Arial, sans-serif;
+    font-size: 8pt;
+    color: #606060;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+}
+
+header#cabecalho_artigo h3{
+    font-size: 12pt;
+    color: #808080;
+}
+
+header#cabecalho_artigo h3.txt_direita {
+    text-align: right;
 }
 
 /* Formatação da area lateral */
 
 aside#lateral {
     display: block; /* altera o tipo de display para blocos */
-    width: 350px;   /*altera o tamanho do bloco */
+    width: 355px;   /*altera o tamanho do bloco */
     float: right;    /* transforma em um bloco flutuante a direita */
+    background-color: #dddddd;
+    margin-top: 10px;
+    box-shadow: 2px 1px 2px rgba(0, 0, 0, .5);
+}
+
+aside#lateral h1 {
+    font-family: 'fonte_logo', sans-serif;
+    font-size: 18pt;
+    color: #808080;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+aside#lateral h2{
+    font-size: 15pt;
+    color: white;
+    background-color: #606060;
+    padding: 10px;
 }
 
 /* Formatação de imagens com legendas */
@@ -143,53 +208,53 @@ figure.foto_legenda figcaption{
     transition: opacity 1s; /* efeito de transição que ocorre quando o atibuto opacidade for alterado, com duração de 1 segundo */
 }
 
-/* Formatação das tabelas */
-
-table#especs{
-    border: 2px solid #606060;
-    border-spacing: 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table#especs caption{
-    color: #888888;
-    font-weight: bolder;
-    font-size: 14pt;
-}
-
-table#especs span#data_ref{
-    display: block;
-    float: right;
-    color: black;
-    font-size: 8pt;
-    margin-top: 10px;
-}
-
-table#especs td{
-    background: #606060;
-    color: white;
-    font-weight: bold;
-    text-align: right;
-    vertical-align: top;
-    padding: 10px;
-}
-
-table#especs td.col_direita {
-    background: #909090;
-    color: black;
-    font-weight: inherit;
-    text-align: left;
-    vertical-align: middle;
-    border: 2px solid #606060;
-}
-
-/* Formatação do rodapé */
-
 figure.foto_legenda:hover figcaption{
     /* formatação que ocorre apenas quando passa o mouse por cima do objeto figcaption */
     opacity: 1; /* toda o objeto 100% visivel */
 }
+
+/* Formatação das tabelas */
+
+table#especs{
+    border: 2px solid #606060; /* Borda ao redor da tabela */
+    border-spacing: 0px;        /* remove o espaçamento das bordas internas */
+    margin-left: auto;          /* centraliza a tabela */
+    margin-right: auto;
+}
+
+table#especs caption{
+    color: #888888;     /* Altera a cor do titulo */
+    font-weight: bolder;    /* coloca o titulo em negrito */
+    font-size: 14pt;    /* altera o tamanho do titulo */
+}
+
+table#especs span#data_ref{ /* formatação do bloco span dentro do titulo */
+    display: block;     /* Layout em block */
+    float: right;       /* flutuante a direita */
+    color: black;    /* altera a cor do texto */
+    font-size: 8pt;     /* altera o tamnho do texto */
+    margin-top: 10px;   /* adiciona uma margem superior para "rebaixar" a posição */
+}
+
+table#especs td{            /* configuração geral das celulas */
+    background: #606060;    /* altera a cor do fundo */
+    color: white;       /* altera a cor do texto */
+    font-weight: bold;      /* coloca o texto em negrito */
+    text-align: right;      /* altera o alinhamento para a direita */
+    vertical-align: top;    /* altera o alinhamento vertical para o topo */
+    padding: 10px;          /* adiciona um espaçamento interno */
+}
+
+table#especs td.col_direita {   /* configuração das celulas da direita */
+    background: #909090;    /* altera a cor de fundo */
+    color: black;           /* altera a cor do texto */
+    font-weight: inherit;       /* remove o negrito */
+    text-align: left;           /* alinha o texto a esquerda */
+    vertical-align: middle;     /* alinha o texto verticalmente centralizado */
+    border: 2px solid #606060;  /* adiciona uma borda */
+}
+
+/* Formatação do rodapé */
 
 footer#rodape{
     clear: both;    /* remove as configurações herdadas */
