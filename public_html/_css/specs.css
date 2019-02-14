@@ -4,7 +4,16 @@
 */
 @charset "UTF-8";
 
-iframe {
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe::-webkit-scrollbar {
+    display: none;
+}
+
+iframe{
     border: none;
 }
 
@@ -12,9 +21,13 @@ iframe#frame_spec {
     width: 420px;
     height: 280px;
     overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 section#conteudo {
     width: 1000px;
     margin: auto;
 }
+
+
