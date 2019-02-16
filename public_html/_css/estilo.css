@@ -112,7 +112,7 @@ header#cabecalho img#img_oculos_pequeno{
 
 section#corpo {
     display: block; /* altera o tipo de display para blocos */
-    width: 425px;   /*altera o tamanho do bloco */
+    width: 500px;   /*altera o tamanho do bloco */
     float: left;    /* transforma em um bloco flutuante a esquerda */
     padding-right: 10px; /* adiciona o padding */
     border-right: 1px black solid; /* adiciona a borda a direita do corpo */
@@ -159,7 +159,7 @@ header#cabecalho_artigo h3.txt_direita {
 
 aside#lateral {
     display: block; /* altera o tipo de display para blocos */
-    width: 355px;   /*altera o tamanho do bloco */
+    width: 400px;   /*altera o tamanho do bloco */
     float: right;    /* transforma em um bloco flutuante a direita */
     background-color: #dddddd;
     margin-top: 10px;
