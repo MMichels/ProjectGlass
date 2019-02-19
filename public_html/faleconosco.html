@@ -38,7 +38,7 @@
                             <h3 class="txt_direita">Atualizado em 18/Fev/2019</h3>
                         </hgroup>
                     </header>
-                    <form>
+                    <form method="post" id="form_contato" action="mailto:michels09@hotmail.com">
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
                             <p><label for="txt_nome">Nome:</label><input id="txt_nome" name="txtNome" type="text" size="30" maxlength="30" placeholder="Nome completo"/></p>
@@ -53,16 +53,34 @@
 
                         <fieldset id="endereco">
                             <legend>Endereço do Usuário</legend>
-                            <p><label for="txt_logradouro">Logradouro:</label><input id="txt_logradouro" name="txtLogradouro" placeholder="Rua Jose da Silva" /></p>
-                            <p><label for="txt_numero">Número:</label><input type="number" id="txt_numero" name="txtNumero" min="1" max="99999"/></p>
-                            <p><label for="txt_estado">Estado:</label><input id="txt_estado" name="txtEstado" size="4" maxlength="2" placeholder="UF"/></p>
-                            <p><label for="txt_cidade">Cidade:</label><input id="txt_cidade" name="txtCidade" size="10" maxlength="30" placeholder="Cidade"/></p>
+                            <p><label for="txt_logradouro">Logradouro: </label><input id="txt_logradouro" name="txtLogradouro" placeholder="Rua Jose da Silva" /></p>
+                            <p><label for="txt_numero">Número: </label><input type="number" id="txt_numero" name="txtNumero" min="0" max="99999"/></p>
+                                    <p><label for="slc_estado">Estado: </label><select id="slc_estado" name="txtEstado">
+                                            <optgroup label="Região Sudeste">
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="MG">Minas Gerais</option>
+                                            </optgroup>
+                                            <optgroup label="Região Sul">
+                                                <option value="PR" selected="">Paraná</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                            </optgroup>
+                                    </select></p>
+                            <p><label for="txt_cidade">Cidade: </label><input id="txt_cidade" name="txtCidade" size="20" maxlength="30" placeholder="Cidade" list="cidades"/></p>
+                            <datalist id="cidades">
+                                <option value ="Rio de janeiro"></option>
+                                <option value="São paulo"></option>
+                                <option value="Curitiba"></option>
+                            </datalist>
                         </fieldset>
 
                         <fieldset id="mensagem">
                             <legend>Mensagem do Usuário</legend>
-                            <p><label for="box_urgencia">Grau de Urgência:</label> min<input type="range" id="box_urgencia" name="boxUrgencia" />máx</p>
-                            <p><label for="txt_mensagem">Mensagem:</label><input type="text" id="txt_mensagem" name="txtMensaem" size="100" maxlength="2000" /></p>
+                            <p><label for="box_urgencia">Grau de Urgência:</label>Min<input type="range" id="box_urgencia" name="boxUrgencia" min="0" max="10" />Máx</p>
+                            <p><label for="txt_mensagem">Mensagem:</label>
+                                <textarea id="txt_mensagem" name="txtMensaem" cols="45" rows="5"></textarea>
+                            </p>
                         </fieldset>
 
                         <fieldset id="pedido">
