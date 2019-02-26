@@ -38,7 +38,7 @@
                             <h3 class="txt_direita">Atualizado em 18/Fev/2019</h3>
                         </hgroup>
                     </header>
-                    <form method="post" id="form_contato" action="mailto:michels09@hotmail.com">
+                    <form method="post" id="form_contato" action="mailto:michels09@hotmail.com" oninput="calc_total();">
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
                             <p><label for="txt_nome">Nome:</label><input id="txt_nome" name="txtNome" type="text" size="30" maxlength="30" placeholder="Nome completo"/></p>
@@ -85,13 +85,14 @@
 
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                            <p><label for="chk_adquirir">Gostaria de adquirir um Google Glass quando disponível: </label><input id="chk_adquirir" name="chkAdquirir" type="checkbox"/></p>
+                            <p><input id="chk_adquirir" name="chkAdquirir" type="checkbox"/>
+                                <label for="chk_adquirir">Gostaria de adquirir um Google Glass quando disponível: </label></p>
                             <p><label for="box_cor">Cor: </label><input id="box_cor" name="boxCor" type="color"/></p>
-                            <p><label for="spn_qntd">Quantidade: </label><input id="spn_qntd" name="spnQntd" type="number" min="1"  max="5"/></p>
-                            <p><label for="txt_total">Preço Total: R$ </label><input id="txt_total" name="txtTotal" type="number" min="1"  max="50000"/></p>
+                            <p><label for="spn_qntd">Quantidade: </label><input id="spn_qntd" name="spnQntd" type="number" min="0"  max="5"/></p>
+                            <p><label for="txt_total">Preço Total: U$ </label><input id="txt_total" name="txtTotal" type="text" readonly/></p>
                         </fieldset>
                     </form>
-                    <p><input value="Enviar!" id="btn_enviar" name="btnEnviar" type="button"/></p>
+                    <p><input value="Enviar!" id="btn_enviar" name="btnEnviar" type="image" src="_imagens/botao-enviar.png"/></p>
                             
                 </article>
             </section>
